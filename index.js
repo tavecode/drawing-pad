@@ -74,6 +74,8 @@ const reset = document.querySelector('#reset');
 reset.onclick = () => square.style.backgroundColor = 'lightgray';
 
 
+colorPicker.oninput = (e) => colour = (e.target.value)
+
 
 
 
