@@ -23,7 +23,13 @@ function fillBoard(dimensions) {
 fillBoard(16)
 
 function changeSize(userInput) {
+    if((userInput >= 2) && (userInput <= 100)) {
     fillBoard(userInput)
+    }
+    else {
+        console.log('ERROR, invalid size input')
+        alert('ERROR, choose a valid size: 2 - 100')
+    }
 }
 
 
