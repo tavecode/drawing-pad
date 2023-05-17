@@ -1,6 +1,8 @@
 // add 16x16 square divs to container in a grid shape (borders/margins/padding?)
 // hover/drag effect
-
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 
 function fillBoard(dimensions) {
     let container = document.querySelector('.container')
@@ -12,9 +14,11 @@ function fillBoard(dimensions) {
     let amount = dimensions * dimensions;
     for (let i = 0; i<amount; i++) {
         let square = document.createElement('div')
-          square.style.backgroundColor = 'lightgray'
+          square.style.backgroundColor = 'white'
         square.addEventListener('mouseover', () => {
+            if(mouseDown) {
             square.style.backgroundColor = `${colour}`
+            }
         })
        // square.addEventListener('mouseover', draw)
         container.insertAdjacentElement('beforeend', square);
@@ -50,15 +54,16 @@ blue.onclick = () => colour = 'blue';
 const grey = document.querySelector('#grey');
 grey.onclick = () => colour = 'grey';
 
+const lg = document.querySelector('#lg');
+lg.onclick = () => colour = 'lightgray';
+
 const lb = document.querySelector('#lb');
 lb.onclick = () => colour = 'lightskyblue';
 
 const eraser = document.querySelector('#eraser');
-eraser.onclick = () => colour = 'lightgray';
+eraser.onclick = () => colour = 'white';
 
-//let mouseDown = false
-//document.body.onmousedown = () => (mouseDown = true)
-//document.body.onmouseup = () => (mouseDown = false)
+
 
 //draw(e) {
 //    if (e.type === 'mouseover' && !mouseDown) return
@@ -70,8 +75,13 @@ eraser.onclick = () => colour = 'lightgray';
 const rainbow = document.querySelector('#rainbow');
 rainbow.onclick = () => colour = '';
 
-const reset = document.querySelector('#reset');
-reset.onclick = () => square.style.backgroundColor = 'lightgray';
+//const reset = document.querySelector('#reset');
+//reset.onclick = () => squares.style.backgroundColor = 'white'
+
+
+
+//const reset = document.querySelector('#reset');
+//reset.onclick = () => squares.style.backgroundColor = 'lightgray';
 
 
 colorPicker.oninput = (e) => colour = (e.target.value)
