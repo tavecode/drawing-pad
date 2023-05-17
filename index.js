@@ -13,7 +13,7 @@ function fillBoard(dimensions) {
     let amount = dimensions * dimensions;
     for (let i = 0; i<amount; i++) {
         let square = document.createElement('div')
-          square.style.backgroundColor = 'blue'
+//          square.style.backgroundColor = 'blue'
         container.insertAdjacentElement('beforeend', square);
     }
 }
