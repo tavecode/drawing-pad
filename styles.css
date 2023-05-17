@@ -16,6 +16,38 @@ h1 {
     padding: 8px 12px 8px 12px;
 }
 
+/* rainbow-------------------------------*/
+#rainbow {
+    background-color: black;
+    font-weight: 600;
+    font-size: larger;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+}
+#r{
+    color: red;
+}
+#a{
+    color:orange;
+}
+#i{
+    color: rgb(192, 192, 0);
+}
+#n{
+    color: green;
+}
+#b{
+    color: rgb(52, 52, 255);
+}
+#o{
+    color: rgb(111, 35, 165);
+}
+#w{
+    color: violet;
+}
+/* rainbow----------------------------*/
+
 
 #reset {
     font-weight: 600;
