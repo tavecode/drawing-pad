@@ -5,12 +5,15 @@
 
 function fillBoard(dimensions) {
     let container = document.querySelector('.container')
+    let squares = container.querySelectorAll('div')
+    squares.forEach((div) => div.remove());
     container.style.gridTemplateColumns = `repeat(${dimensions} , 1fr)`; //change '16' to variable
     container.style.gridTemplateRows = `repeat(${dimensions} , 1fr)`;
     
-    for (let i = 0; i<256; i++) {
+    let amount = dimensions * dimensions;
+    for (let i = 0; i<amount; i++) {
         let square = document.createElement('div')
-//          square.style.backgroundColor = 'blue'
+          square.style.backgroundColor = 'blue'
         container.insertAdjacentElement('beforeend', square);
     }
 }
@@ -18,6 +21,10 @@ function fillBoard(dimensions) {
 
 
 fillBoard(16)
+
+function changeSize(userInput) {
+    fillBoard(userInput)
+}
 
 
 
