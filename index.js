@@ -16,9 +16,10 @@ function fillBoard(dimensions) {
         square.addEventListener('mouseover', () => {
             square.style.backgroundColor = `${colour}`
         })
+       // square.addEventListener('mouseover', draw)
         container.insertAdjacentElement('beforeend', square);
     }
-    document.querySelector('#gridSize').textContent = `${dimensions} x ${dimensions}`
+    document.querySelector('#gridSize').textContent = `${dimensions} x ${dimensions} | ${amount}`
 }
 
 
@@ -52,8 +53,25 @@ grey.onclick = () => colour = 'grey';
 const lb = document.querySelector('#lb');
 lb.onclick = () => colour = 'lightskyblue';
 
-//const rainbow = document.querySelector('#rainbow');
-//rainbow.onclick = () => colour = '';
+const eraser = document.querySelector('#eraser');
+eraser.onclick = () => colour = 'lightgray';
+
+//let mouseDown = false
+//document.body.onmousedown = () => (mouseDown = true)
+//document.body.onmouseup = () => (mouseDown = false)
+
+//draw(e) {
+//    if (e.type === 'mouseover' && !mouseDown) return
+//    else {
+//    e.target.style.backgroundColor = colour
+//   }
+//}
+
+const rainbow = document.querySelector('#rainbow');
+rainbow.onclick = () => colour = '';
+
+const reset = document.querySelector('#reset');
+reset.onclick = () => square.style.backgroundColor = 'lightgray';
 
 
 
