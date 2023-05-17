@@ -13,9 +13,10 @@ function fillBoard(dimensions) {
     let amount = dimensions * dimensions;
     for (let i = 0; i<amount; i++) {
         let square = document.createElement('div')
-//          square.style.backgroundColor = 'blue'
+          square.style.backgroundColor = 'lightgray'
         container.insertAdjacentElement('beforeend', square);
     }
+    document.querySelector('#gridSize').textContent = `${dimensions} x ${dimensions}`
 }
 
 
@@ -31,6 +32,7 @@ function changeSize(userInput) {
         alert('ERROR, choose a valid size: 2 - 100')
     }
 }
+
 
 
 
