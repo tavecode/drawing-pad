@@ -1,3 +1,15 @@
+/* PAD-----------------------*/
+.container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+}
+
+
+
+
+
+
 h1 {
 
 }
@@ -15,7 +27,7 @@ h1 {
     border-radius: 6px;
     padding: 8px 12px 8px 12px;
 }
-
+/* BUTTONS*/
 /* rainbow-------------------------------*/
 #rainbow {
     background-color: black;
@@ -123,6 +135,8 @@ h1 {
 .drawingBlack{
     background-color: black;
 }
+
+/* END BUTTONS/COLOURS
 
 /* add blue pen sketch images*/
 /* remove shadows on buttons */
