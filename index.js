@@ -2,7 +2,6 @@
 // hover/drag effect
 
 
-
 function fillBoard(dimensions) {
     let container = document.querySelector('.container')
     let squares = container.querySelectorAll('div')
@@ -14,6 +13,9 @@ function fillBoard(dimensions) {
     for (let i = 0; i<amount; i++) {
         let square = document.createElement('div')
           square.style.backgroundColor = 'lightgray'
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = `${colour}`
+        })
         container.insertAdjacentElement('beforeend', square);
     }
     document.querySelector('#gridSize').textContent = `${dimensions} x ${dimensions}`
@@ -32,6 +34,27 @@ function changeSize(userInput) {
         alert('ERROR, choose a valid size: 2 - 100')
     }
 }
+
+
+//colours
+const black = document.querySelector('#black');
+black.onclick = () => colour = 'black';
+
+const navy = document.querySelector('#navy');
+navy.onclick = () => colour = 'navy';
+
+const blue = document.querySelector('#blue');
+blue.onclick = () => colour = 'blue';
+
+const grey = document.querySelector('#grey');
+grey.onclick = () => colour = 'grey';
+
+const lb = document.querySelector('#lb');
+lb.onclick = () => colour = 'lightskyblue';
+
+//const rainbow = document.querySelector('#rainbow');
+//rainbow.onclick = () => colour = '';
+
 
 
 
