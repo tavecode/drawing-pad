@@ -22,6 +22,10 @@ function fillBoard(dimensions) {
             square.style.backgroundColor = `${colour}`
             }
         })
+        square.addEventListener('mousedown', () => {
+            square.style.backgroundColor = `${colour}`
+            }
+        )
        // square.addEventListener('mouseover', draw)
         container.insertAdjacentElement('beforeend', square);
     }
