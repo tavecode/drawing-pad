@@ -36,9 +36,12 @@ function fillBoard(dimensions) {
 
 fillBoard(16)
 
+let width = 16 //for reset
+
 function changeSize(userInput) {
     if((userInput >= 2) && (userInput <= 100)) {
     fillBoard(userInput)
+    width = userInput
     }
     else {
         console.log('ERROR, invalid size input')
@@ -81,8 +84,8 @@ eraser.onclick = () => colour = 'white';
 const rainbow = document.querySelector('#rainbow');
 rainbow.onclick = () => colour = '';
 
-//const reset = document.querySelector('#reset');
-//reset.onclick = () => squares.style.backgroundColor = 'white'
+const reset = document.querySelector('#reset');
+reset.onclick = () => fillBoard(width)
 
 
 

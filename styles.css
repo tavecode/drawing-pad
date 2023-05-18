@@ -12,6 +12,11 @@ body {
     gap: 12px;
     margin-bottom: 4px;
 }
+.chooseres{
+    font-size: 22px;
+    padding: 0;
+    align-self: center;
+}
 .controls{
     margin: 4px;
 }
